@@ -443,6 +443,7 @@
         :key="index"
         :label="item.navTypeName"
         :name="item.id"
+        :icon="item.icon"
         :nav-info-list="item"
 
         class="anchor-item"
@@ -451,7 +452,7 @@
           <div id="content" class="content-site customize-site">
             <div class="d-flex flex-fill ">
               <h4 class="text-gray text-lg mb-4">
-                <i id="term-2" class="site-tag iconfont icon-tag icon-lg mr-1" />
+                <i id="term-2" :class="'site-tag' +item.icon" />
                 {{ item.navTypeName }}
               </h4>
               <div class="flex-fill" />
@@ -460,7 +461,7 @@
             <div class="row ">
               <div
                 v-for="info in item.navInfoList"
-                v-if="item.navInfoList.length>0"
+                v-if="item.navInfoList !== null"
                 class="url-card col-4   "
               >
                 <div class="url-body default">

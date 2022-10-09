@@ -2,7 +2,6 @@ import axios from 'axios'
 import { get } from 'lodash'
 // import util from '@/libs/util'
 import router from '@/router'
-import { util } from 'chai'
 
 /**
  * @description 创建请求实例
@@ -23,7 +22,6 @@ function createService() {
   function errorCreate(error) {
     // 打印到控制台
     if (process.env.NODE_ENV === 'development') {
-      util.log.danger('>>>>>> Error >>>>>>')
       console.log(error)
     }
     // 显示提示
@@ -150,7 +148,7 @@ function createRequestFunction(service) {
         'Content-Type': get(config, 'headers.Content-Type', 'application/json')
       },
       timeout: 10000,
-      baseURL: 'http://121.5.129.126:8010',
+      baseURL: 'http://121.5.129.126:8010/web',
       data: {}
     }
     return service(Object.assign(configDefault, config))

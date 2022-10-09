@@ -15,7 +15,7 @@
           <!--          </a>-->
           <el-dropdown-item style="padding:0 10px;">
             <div flex="align:center">
-              <i class="site-tag iconfont icon-tag icon-lg mr-1" />
+              <i :class="'site-tag '+ item.icon" />
               <span>{{ item.label }}</span>
             </div>
           </el-dropdown-item>
@@ -65,6 +65,10 @@ export default {
     },
     // 当前楼层
     value: {
+      type: String,
+      default: ''
+    },
+    icon: {
       type: String,
       default: ''
     },
