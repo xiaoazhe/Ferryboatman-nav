@@ -35,6 +35,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    id: {
+      type: String,
+      default: ''
     }
   }
 }

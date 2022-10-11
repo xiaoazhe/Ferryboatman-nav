@@ -442,7 +442,8 @@
         v-for="(item, index) of navData"
         :key="index"
         :label="item.navTypeName"
-        :name="item.id"
+        :name="item.sort"
+        :id="item.id"
         :icon="item.icon"
         :nav-info-list="item"
 

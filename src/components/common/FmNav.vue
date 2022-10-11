@@ -9,10 +9,6 @@
           :key="key"
           @click="arrive(key, item)"
         >
-          <!--          <a href="#" class="smooth">-->
-          <!--            <i class="iconfont icon-shoucang " />-->
-          <!--            <h3>{{ item.label }}</h3>-->
-          <!--          </a>-->
           <el-dropdown-item style="padding:0 10px;">
             <div flex="align:center">
               <i :class="'site-tag '+ item.icon" />
@@ -23,29 +19,6 @@
       </ul>
     </div>
     <div class="placeholder" style="height:0px" />
-    <!--    </div>-->
-
-    <!--    <ul class="anchor__nav card">-->
-    <!--      &lt;!&ndash;      <li&ndash;&gt;-->
-    <!--      &lt;!&ndash;        v-for="(item, key) in anchorNavData"&ndash;&gt;-->
-    <!--      &lt;!&ndash;        :key="key"&ndash;&gt;-->
-    <!--      &lt;!&ndash;        @click="arrive(key, item)"&ndash;&gt;-->
-    <!--      &lt;!&ndash;      >&ndash;&gt;-->
-    <!--      &lt;!&ndash;        <i v-if="item.icon" :class="item.icon" />&ndash;&gt;-->
-    <!--      &lt;!&ndash;        <span class="ellipsis" :title="item.label">{{ item.label }}</span>&ndash;&gt;-->
-    <!--      &lt;!&ndash;      </li>&ndash;&gt;-->
-    <!--      <li-->
-    <!--        v-for="(item, key) in anchorNavData"-->
-    <!--        :key="key"-->
-    <!--        class="sidebar-item"-->
-    <!--        @click="arrive(key, item)"-->
-    <!--      >-->
-    <!--        <a href="#term-2" class="smooth">-->
-    <!--          <i class="iconfont icon-shoucang icon-fw icon-lg mr-2" />-->
-    <!--          <span>{{ item.label }}</span>-->
-    <!--        </a>-->
-    <!--      </li>-->
-    <!--    </ul>-->
     <div class="anchor__content">
       <slot />
     </div>
@@ -159,7 +132,8 @@ export default {
           dom: item.$el,
           label: item.label,
           icon: item.icon,
-          disabled: item.disabled
+          disabled: item.disabled,
+          id: item.id
         })
       })
     },
