@@ -1,5 +1,5 @@
 <template>
-  <div class="anchor-item card" :class="{ disabled }">
+  <div  :class="{ disabled }">
     <slot :name="name" :label="label">
       <!--      <div class="anchor-item__title">-->
       <!--        {{ label }}-->
@@ -48,8 +48,8 @@ export default {
 .anchor-item.card {
   padding: 0;
   margin-bottom: 20px;
-  border-radius: 300px;
-  margin-right: 500px;
+  border-radius: 30px;
+  margin-right: 300px;
   overflow: visible;
 }
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div
       class="header-big  post-top css-color mb-4"
       style="background-image: linear-gradient(45deg, #b28ae7 0%, #b75c5c 50%, #5520e8 100%);"
@@ -440,100 +441,81 @@
     <fm-nav v-if="navData.length>0" v-model="anchor" :nav-info="navData">
       <fm-nav-item
         v-for="(item, index) of navData"
+        :id="item.id"
         :key="index"
         :label="item.navTypeName"
         :name="item.sort"
-        :id="item.id"
         :icon="item.icon"
         :nav-info-list="item"
 
         class="anchor-item"
       >
-        <div class="text">
-          <div id="content" class="content-site customize-site">
-            <div class="d-flex flex-fill ">
-              <h4 class="text-gray text-lg mb-4">
-                <i id="term-2" :class="'site-tag' +item.icon" />
-                {{ item.navTypeName }}
-              </h4>
-              <div class="flex-fill" />
-              <a class="btn-move text-xs" href="#">more+</a>
-            </div>
-            <div class="row ">
-              <div
-                v-for="info in item.navInfoList"
-                v-if="item.navInfoList !== null"
-                class="url-card col-4   "
-              >
-                <div class="url-body default">
-                  <a
-                    :href="info.navUrl"
-                    target="_blank"
-                    data-id="689"
-                    :data-src="info.navUrl"
-                    class="card no-c  mb-4 site-689"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    :title="info.navDesc"
-                  >
-                    <div class="card-body">
-                      <div class="url-content d-flex align-items-center">
-                        <div
-                          class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"
+        <!--        <div class="text">-->
+        <div id="content" class="content-site customize-site">
+          <div class="d-flex flex-fill ">
+            <h4 class="text-gray text-lg mb-4">
+              <i id="term-2" :class="'site-tag' +item.icon" />
+              {{ item.navTypeName }}
+            </h4>
+            <div class="flex-fill" />
+            <a class="btn-move text-xs" href="#">more+</a>
+          </div>
+          <div class="row ">
+            <div
+              v-for="info in item.navInfoList"
+              v-if="item.navInfoList !== null"
+              class="url-card col-2   "
+            >
+              <div class="url-body default">
+                <a
+                  :href="info.navUrl"
+                  target="_blank"
+                  data-id="689"
+                  :data-src="info.navUrl"
+                  class="card no-c  mb-4 site-689"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  :title="info.navDesc"
+                >
+                  <div class="card-body">
+                    <div class="url-content d-flex align-items-center">
+                      <div
+                        class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"
+                      >
+                        <img
+                          class="lazy"
+                          :src="info.navLogo"
                         >
-                          <img
-                            class="lazy"
-                            :src="info.navLogo"
-                          >
+                      </div>
+                      <div class="url-info flex-fill">
+                        <div class="text-sm overflowClip_1">
+                          <strong>{{ info.navName }}</strong>
                         </div>
-                        <div class="url-info flex-fill">
-                          <div class="text-sm overflowClip_1">
-                            <strong>{{ info.navName }}</strong>
-                          </div>
-                          <p class="overflowClip_1 m-0 text-muted text-xs">{{ info.navDesc }}</p>
-                        </div>
+                        <p class="overflowClip_1 m-0 text-muted text-xs">{{ info.navDesc }}</p>
                       </div>
                     </div>
-                  </a>
-                  <a
-                    :href="info.navUrl"
-                    :data-src="info.navUrl"
-                    class="togo text-center text-muted is-views"
-                    data-id="689"
-                    data-toggle="tooltip"
-                    data-placement="right"
-                    title="直达"
-                    rel="nofollow"
-                  ><i
-                    class="iconfont icon-goto"
-                  /></a>
-                </div>
+                  </div>
+                </a>
+                <a
+                  :href="info.navUrl"
+                  :data-src="info.navUrl"
+                  class="togo text-center text-muted is-views"
+                  data-id="689"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="直达"
+                  rel="nofollow"
+                ><i
+                  class="iconfont icon-goto"
+                /></a>
               </div>
             </div>
           </div>
         </div>
-
       </fm-nav-item>
     </fm-nav>
-    <!--    <footer class="main-footer footer-type-1 text-xs">-->
-    <!--      <div id="footer-tools" class="d-flex flex-column">-->
-    <!--        <a id="go-to-up" href="javascript:" class="btn rounded-circle go-up m-1" rel="go-top">-->
-    <!--          <i class="iconfont icon-to-up" />-->
-    <!--        </a>-->
-
-    <!--        <el-button-->
-    <!--          id="yejian"-->
-    <!--          class="btn rounded-circle switch-dark-mode m-1"-->
-    <!--          data-toggle="tooltip"-->
-    <!--          data-placement="left"-->
-    <!--          title="夜间模式"-->
-    <!--          @click.native="updateColor"-->
-    <!--        >-->
-    <!--          <i class="mode-ico iconfont icon-yejian" />-->
-    <!--        </el-button>-->
-    <!--      </div>-->
-    <!--    </footer>-->
   </div>
+
 </template>
 
 <script>

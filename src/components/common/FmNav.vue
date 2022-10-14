@@ -22,6 +22,43 @@
     <div class="anchor__content">
       <slot />
     </div>
+    <h4 class="text-gray text-lg mb-4">
+      <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接
+    </h4>
+    <div class="friendlink text-xs card">
+      <div class="card-body">
+        <a href="https://gitee.com/chongzhe/nav_web" title="导航网站" target="_blank">网站导航</a>
+        <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank">吾爱破解</a>
+        <a href="https://www.a.cool/" title="来吧，让世界再酷一点！" target="_blank">阿酷导航</a>
+        <a href="#" target="_blank" title="更多链接">更多链接</a>
+      </div>
+    </div>
+    <footer class="main-footer footer-type-1 text-xs">
+      <!--      <div id="footer-tools" class="d-flex flex-column">-->
+      <!--        <a id="go-to-up" href="javascript:" class="btn rounded-circle go-up m-1" rel="go-top">-->
+      <!--          <i class="iconfont icon-to-up" />-->
+      <!--        </a>-->
+
+      <!--        <el-button-->
+      <!--            id="yejian"-->
+      <!--            class="btn rounded-circle switch-dark-mode m-1"-->
+      <!--            data-toggle="tooltip"-->
+      <!--            data-placement="left"-->
+      <!--            title="夜间模式"-->
+      <!--            @click.native="updateColor"-->
+      <!--        >-->
+      <!--          <i class="mode-ico iconfont icon-yejian" />-->
+      <!--        </el-button>-->
+      <!--      </div>-->
+      <div class="footer-inner" style="text-align: center;">
+        <div class="footer-text">本站内容源自互联网，如有内容侵犯了您的权益，请联系删除相关内容。联系邮箱：<a
+          href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=hiliutongxu@qq.com"
+        />
+
+          <div class="footer-text" style="position: relative; top: 6px;" />
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -268,8 +305,8 @@ export default {
   top: $headerHeight;
   z-index: 10;
   float: left;
-  width: 200px;
-  padding: 15px 20px;
+  width: 120px;
+  padding: 10px 10px;
 
   li {
     line-height: 20px;
@@ -306,6 +343,6 @@ export default {
 
 .anchor__content {
   float: right;
-  width: calc(100% - 120px);
+  width: calc(100%);
 }
 </style>
