@@ -19,14 +19,17 @@ import '@/assets/theme/wp-content/themes/onenav/js/jquery-ui.min-3.03029.1.js'
 import '@/assets/theme/wp-includes/js/clipboard.min-5.6.2.js'
 import '@/assets/theme/wp-content/themes/onenav/js/popper.min-3.03029.1.js'
 import '@/assets/theme/wp-content/themes/onenav/js/bootstrap.min-3.03029.1.js'
-// import "@/assets/theme/wp-content/themes/onenav/js/lazyload.min-3.03029.1.js"
+import '@/assets/theme/wp-content/themes/onenav/js/jquery.min-3.03029.1.js'
+import '@/assets/theme/wp-content/themes/onenav/js/jquery-ui.min-3.03029.1.js'
+import '@/assets/theme/wp-includes/js/clipboard.min-5.6.2.js'
+import '@/assets/theme/wp-content/themes/onenav/js/popper.min-3.03029.1.js'
+import '@/assets/theme/wp-content/themes/onenav/js/bootstrap.min-3.03029.1.js'
 import '@/assets/theme/wp-content/themes/onenav/js/app-3.03029.1.js'
 
 import '@/assets/theme/wp-content/themes/onenav/css/iconfont-3.03029.1.css'
 import '@/assets/theme/wp-content/themes/onenav/css/bootstrap.min-3.03029.1.css'
 import '@/assets/theme/wp-content/themes/onenav/css/jquery.fancybox.min-3.03029.1.css'
 import '@/assets/theme/wp-content/themes/onenav/css/style-3.03029.1.css'
-import $ from 'jquery'
 
 export default {
   components: {

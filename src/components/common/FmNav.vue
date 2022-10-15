@@ -1,6 +1,6 @@
 <template>
 
-  <div ref="anchor" class="sidebar-scroll">
+  <div ref="anchor" class="sidebar-scroll" style="  background-color: #000000;">
     <!--    <div class="big-header-banner">-->
     <div id="header" class="page-header">
       <ul class="anchor__nav card" style="float:right">
@@ -21,18 +21,21 @@
     <div class="placeholder" style="height:0px" />
     <div class="anchor__content">
       <slot />
-    </div>
-    <h4 class="text-gray text-lg mb-4">
-      <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接
-    </h4>
-    <div class="friendlink text-xs card">
-      <div class="card-body">
-        <a href="https://gitee.com/chongzhe/nav_web" title="导航网站" target="_blank">网站导航</a>
-        <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank">吾爱破解</a>
-        <a href="https://www.a.cool/" title="来吧，让世界再酷一点！" target="_blank">阿酷导航</a>
-        <a href="#" target="_blank" title="更多链接">更多链接</a>
+
+      <div class="friendlink text-xs card" style="  background-color: #3a3939; margin-left: 30px;margin-right: 130px">
+
+        <div class="card-body">
+          <h4 class="text-gray text-lg mb-4">
+            <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接
+          </h4>
+          <a href="https://gitee.com/chongzhe/nav_web" title="导航网站" target="_blank">网站导航</a>
+          <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank">吾爱破解</a>
+          <a href="https://www.a.cool/" title="来吧，让世界再酷一点！" target="_blank">阿酷导航</a>
+          <a href="#" target="_blank" title="更多链接">更多链接</a>
+        </div>
       </div>
     </div>
+
     <footer class="main-footer footer-type-1 text-xs">
       <!--      <div id="footer-tools" class="d-flex flex-column">-->
       <!--        <a id="go-to-up" href="javascript:" class="btn rounded-circle go-up m-1" rel="go-top">-->

@@ -2,9 +2,15 @@
   <div>
 
     <div
-      class="header-big  post-top css-color mb-4"
-      style="background-image: linear-gradient(45deg, #b28ae7 0%, #b75c5c 50%, #5520e8 100%);"
+      class="header-big  post-top "
     >
+      <iframe
+        class="canvas-bg"
+        scrolling="no"
+        sandbox="allow-scripts allow-
+same-origin"
+        src="https://www.ainav.cn/wp-content/themes/onenav/fx/io-fx07.html"
+      />
       <div class="s-search">
         <div id="search" class="s-search mx-auto">
           <div id="search-list-menu" class="hide-type-list">
@@ -404,6 +410,7 @@
           </div>
         </div>
       </div>
+
       <div class="bulletin-big mx-3 mx-md-0">
         <div id="bulletin_box" class="card my-2">
           <div class="card-body py-1 px-2 px-md-3 d-flex flex-fill text-xs text-muted">
@@ -423,20 +430,10 @@
                 </div>
               </div>
             </div>
-            <div class="flex-fill" />
-            <a
-              title="关闭"
-              href="javascript:;"
-              rel="external nofollow"
-              class="bulletin-close"
-              onclick="$('#bulletin_box').slideUp('slow');"
-            ><i
-              class="iconfont icon-searchclose"
-              style="line-height:25px"
-            /></a>
           </div>
         </div>
       </div>
+
     </div>
     <fm-nav v-if="navData.length>0" v-model="anchor" :nav-info="navData">
       <fm-nav-item
@@ -449,6 +446,7 @@
         :nav-info-list="item"
 
         class="anchor-item"
+        style="padding-top: 20px"
       >
         <!--        <div class="text">-->
         <div id="content" class="content-site customize-site">
@@ -473,11 +471,12 @@
                   data-id="689"
                   :data-src="info.navUrl"
                   class="card no-c  mb-4 site-689"
+                  style="  background-color: #3a3939;"
                   data-toggle="tooltip"
                   data-placement="bottom"
                   :title="info.navDesc"
                 >
-                  <div class="card-body">
+                  <div class="card-body ">
                     <div class="url-content d-flex align-items-center">
                       <div
                         class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"
@@ -641,7 +640,8 @@ export default {
 <style scoped lang="scss">
 .anchor-item {
   margin-bottom: 15px;
-  background-color: #fff;
+  margin-right: 100px;
+  background-color: #000000;
 
   .text {
     padding: 20px;

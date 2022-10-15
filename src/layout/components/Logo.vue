@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       title: setting.title,
-      logo: require('../../assets/bt.png')
+      logo: require('../../assets/logo.png')
     }
   },
   computed: {

@@ -3,11 +3,11 @@
     :class="classObj"
     class="app-wrapper"
   >
-    <div class="fixed-header">
-      <navbar />
-    </div>
-    <sidebar class="sidebar-container" />
-    <app-main class="main-container" />
+    <!--    <div class="fixed-header">-->
+    <!--      <navbar />-->
+    <!--    </div>-->
+    <!--    <sidebar class="sidebar-container" />-->
+    <app-main />
   </div>
 </template>
 

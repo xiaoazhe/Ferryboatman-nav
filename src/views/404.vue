@@ -4,8 +4,7 @@
       <div class="header-wrap w1200" flex="justify:between align:center">
         <div class="left">
           <a href="/">
-            <img src="../assets/bt.png" width="100%">
-            <!-- <img src="../assets/images/img-beta.png" class="beta" alt=""> -->
+            <img src="../assets/logo.png" width="100%">
           </a>
         </div>
         <div />
