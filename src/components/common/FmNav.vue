@@ -3,13 +3,13 @@
   <div ref="anchor" class="sidebar-scroll" style="  background-color: #000000;">
     <!--    <div class="big-header-banner">-->
     <div id="header" class="page-header">
-      <ul class="anchor__nav card" style="float:right">
+      <ul class="anchor__nav card" style="float:right;  background: #3a3939;">
         <li
           v-for="(item, key) in anchorNavData"
           :key="key"
           @click="arrive(key, item)"
         >
-          <el-dropdown-item style="padding:0 10px;">
+          <el-dropdown-item style="margin-block:0px; color: #ffffff;">
             <div flex="align:center">
               <i :class="'site-tag '+ item.icon" />
               <span>{{ item.label }}</span>
@@ -21,17 +21,20 @@
     <div class="placeholder" style="height:0px" />
     <div class="anchor__content">
       <slot />
-
-      <div class="friendlink text-xs card" style="  background-color: #3a3939; margin-left: 30px;margin-right: 130px">
+      <h4 class="text-gray text-lg mb-4" style="  margin-left: 30px;margin-right: 130px; color: #b7b3b3;">
+        <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接
+      </h4>
+      <div
+        class="friendlink text-xs card"
+        style="  background-color: #3a3939; margin-left: 30px;margin-right: 130px;"
+      >
 
         <div class="card-body">
-          <h4 class="text-gray text-lg mb-4">
-            <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接
-          </h4>
-          <a href="https://gitee.com/chongzhe/nav_web" title="导航网站" target="_blank">网站导航</a>
-          <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank">吾爱破解</a>
-          <a href="https://www.a.cool/" title="来吧，让世界再酷一点！" target="_blank">阿酷导航</a>
-          <a href="#" target="_blank" title="更多链接">更多链接</a>
+
+          <a href="https://gitee.com/chongzhe/nav_web" title="导航网站" target="_blank" style="color: #b7b3b3;">网站导航</a>
+          <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank" style="color: #b7b3b3;">吾爱破解</a>
+          <a href="https://www.a.cool/" title="来吧，让世界再酷一点！" target="_blank" style="color: #b7b3b3;">阿酷导航</a>
+          <a href="#" target="_blank" title="更多链接" style="color: #b7b3b3;">更多链接</a>
         </div>
       </div>
     </div>
@@ -309,14 +312,15 @@ export default {
   z-index: 10;
   float: left;
   width: 120px;
-  padding: 10px 10px;
+  height: 100%;
+  padding: 1px 1px;
 
   li {
     line-height: 20px;
     height: 20px;
     width: fit-content;
     user-select: none;
-    margin: 20px 0;
+    margin: 10px 0;
     cursor: pointer;
 
     &:hover {

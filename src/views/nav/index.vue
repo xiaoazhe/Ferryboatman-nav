@@ -451,7 +451,7 @@ same-origin"
         <!--        <div class="text">-->
         <div id="content" class="content-site customize-site">
           <div class="d-flex flex-fill ">
-            <h4 class="text-gray text-lg mb-4">
+            <h4 class="text-gray text-lg mb-4" style="color: #b7b3b3;">
               <i id="term-2" :class="'site-tag' +item.icon" />
               {{ item.navTypeName }}
             </h4>
