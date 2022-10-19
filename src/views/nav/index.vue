@@ -8,7 +8,7 @@
         class="canvas-bg"
         scrolling="no"
         sandbox="allow-scripts allow-same-origin"
-        src="https://www.ainav.cn/wp-content/themes/onenav/fx/io-fx07.html"
+        src="https://chongzhe.gitee.io/nav_web/bg/fx/io-fx07.html"
       />
       <div class="s-search">
         <div id="search" class="s-search mx-auto">
