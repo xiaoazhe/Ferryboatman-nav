@@ -7,8 +7,7 @@
       <iframe
         class="canvas-bg"
         scrolling="no"
-        sandbox="allow-scripts allow-
-same-origin"
+        sandbox="allow-scripts allow-same-origin"
         src="https://www.ainav.cn/wp-content/themes/onenav/fx/io-fx07.html"
       />
       <div class="s-search">
@@ -462,7 +461,7 @@ same-origin"
             <div
               v-for="info in item.navInfoList"
               v-if="item.navInfoList !== null"
-              class="url-card col-2   "
+              class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-6a   "
             >
               <div class="url-body default">
                 <a

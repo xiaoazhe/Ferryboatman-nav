@@ -169,7 +169,6 @@ export default {
     },
     // 初始化，获取电梯按钮数据
     init() {
-      console.log(this.navInfo)
       this.children.forEach((item) => {
         this.$set(this.anchorNavData, item.name, {
           dom: item.$el,
@@ -308,7 +307,7 @@ export default {
 <style lang="scss">
 .anchor__nav.card {
   position: sticky;
-  top: $headerHeight;
+  margin-top: -200px;
   z-index: 10;
   float: left;
   width: 120px;
