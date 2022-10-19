@@ -147,7 +147,7 @@ function createRequestFunction(service) {
         'Content-Type': get(config, 'headers.Content-Type', 'application/json')
       },
       timeout: 10000,
-      baseURL: 'http://121.5.129.126:8010/web',
+      baseURL: 'http://121.5.129.126:8010',
       data: {}
     }
     return service(Object.assign(configDefault, config))

@@ -434,7 +434,7 @@
       </div>
 
     </div>
-    <fm-nav v-if="navData.length>0" v-model="anchor" :nav-info="navData">
+    <fm-nav v-if="navData.length>0" v-model="anchor" :nav-info="navData" :nav-link="linkData">
       <fm-nav-item
         v-for="(item, index) of navData"
         :id="item.id"
@@ -517,7 +517,7 @@
 </template>
 
 <script>
-import { NAV_TYPE_LIST } from '@/api/api/nav.js'
+import { NAV_TYPE_LIST, NAV_LINK_LIST } from '@/api/api/nav.js'
 import FmNav from '@/components/common/FmNav'
 
 import '@/assets/theme/wp-content/themes/onenav/js/jquery.min-3.03029.1.js'
@@ -542,17 +542,28 @@ export default {
   data() {
     return {
       navData: [],
-      anchor: ''
+      anchor: '',
+      linkData: [],
+      linkRequest: {
+        pageNum: 1,
+        pageSize: 30
+      }
     }
   },
   mounted() {
     this.findData()
+    this.findLinkData()
   },
   methods: {
     // 获取分页数据
     findData: function() {
       NAV_TYPE_LIST().then((res) => {
         this.navData = res
+      })
+    },
+    findLinkData: function() {
+      NAV_LINK_LIST(this.linkRequest).then((res) => {
+        this.linkData = res.content
       })
     },
     updateColor: function() {

@@ -30,11 +30,11 @@
       >
 
         <div class="card-body">
+          <a
+              v-for="(item, index) of navLink"
 
-          <a href="https://gitee.com/chongzhe/nav_web" title="导航网站" target="_blank" style="color: #b7b3b3;">网站导航</a>
-          <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank" style="color: #b7b3b3;">吾爱破解</a>
-          <a href="https://www.a.cool/" title="来吧，让世界再酷一点！" target="_blank" style="color: #b7b3b3;">阿酷导航</a>
-          <a href="#" target="_blank" title="更多链接" style="color: #b7b3b3;">更多链接</a>
+              :href="item.url" :title="item.title" target="_blank" style="color: #b7b3b3;">{{item.title}}</a>
+
         </div>
       </div>
     </div>
@@ -76,6 +76,10 @@ export default {
   name: 'FmNav',
   props: {
     navInfo: {
+      type: Array,
+      default: () => []
+    },
+    navLink: {
       type: Array,
       default: () => []
     },
