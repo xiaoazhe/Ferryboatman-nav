@@ -21,22 +21,24 @@
     <div class="placeholder" style="height:0px" />
     <div class="anchor__content">
       <slot />
-      <h4 class="text-gray text-lg mb-4" style="  margin-left: 30px;margin-right: 130px; color: #b7b3b3;">
-        <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接
-      </h4>
-      <div
-        class="friendlink text-xs card"
-        style="  background-color: #3a3939; margin-left: 30px;margin-right: 130px;"
-      >
+      <!--      <h4 class="text-gray text-lg mb-4" style="  margin-left: 30px;margin-right: 130px; color: #b7b3b3;">-->
+      <!--        <i id="friendlink" class="iconfont icon-book-mark-line icon-lg mr-2" />友情链接-->
+      <!--      </h4>-->
+      <!--      <div-->
+      <!--        class="friendlink text-xs card"-->
+      <!--        style="  background-color: #3a3939; margin-left: 30px;margin-right: 130px;"-->
+      <!--      >-->
 
-        <div class="card-body">
-          <a
-              v-for="(item, index) of navLink"
+      <!--        <div class="card-body">-->
+      <!--          <a-->
+      <!--            v-for="(item, index) of navLink"-->
+      <!--            :href="item.url"-->
+      <!--            target="_blank"-->
+      <!--            style="color: #b7b3b3;"-->
+      <!--          >{{ item.title }}</a>-->
 
-              :href="item.url" :title="item.title" target="_blank" style="color: #b7b3b3;">{{item.title}}</a>
-
-        </div>
-      </div>
+      <!--        </div>-->
+      <!--      </div>-->
     </div>
 
     <footer class="main-footer footer-type-1 text-xs">

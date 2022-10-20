@@ -552,7 +552,7 @@ export default {
   },
   mounted() {
     this.findData()
-    this.findLinkData()
+    // this.findLinkData()
   },
   methods: {
     // 获取分页数据

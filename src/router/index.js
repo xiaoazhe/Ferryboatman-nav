@@ -9,19 +9,19 @@ Router.prototype.push = function push(location) {
 }
 
 export const constantRoutes = [
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('@/views/home/login'),
-    hidden: true
-  },
+  // {
+  //   path: '/login',
+  //   name: 'Login',
+  //   component: () => import('@/views/home/login'),
+  //   hidden: true
+  // },
+  // {
+  //   path: '/',
+  //   redirect: '/login',
+  //   hidden: true
+  // },
   {
     path: '/',
-    redirect: '/login',
-    hidden: true
-  },
-  {
-    path: '/toNav',
     name: 'Nav',
     component: () => import('@/views/nav/index'),
     hidden: true
