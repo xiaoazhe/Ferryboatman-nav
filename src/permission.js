@@ -16,43 +16,43 @@ function addRoutes(parent, RouterList) {
   })
 }
 
-const whiteList = ['/login']
-router.beforeEach(async(to, from, next) => {
-  NProgress.start()
-  const hasToken = getToken()
-  if (hasToken) {
-    if (whiteList.indexOf(to.path) !== -1) {
-      const indexPath = store.getters.indexPath
-      next(indexPath)
-      NProgress.done()
-    } else {
-      const hasMenu = !!store.getters.permissionRoutes.length
-      if (hasMenu) {
-        next()
-      } else {
-        try {
-          const res = await store.dispatch('permission/generateRoutes')
-          addRoutes(router, res)
-          next({
-            ...to,
-            replace: true
-          })
-        } catch (error) {
-          await store.dispatch('user/resetToken')
-          next(`/login?redirect=${to.fullPath}`)
-          NProgress.done()
-        }
-      }
-    }
-  } else {
-    if (whiteList.indexOf(to.path) !== -1) {
-      next()
-    } else {
-      next(`/login?redirect=${to.fullPath}`)
-      NProgress.done()
-    }
-  }
-})
+// const whiteList = ['/login']
+// router.beforeEach(async(to, from, next) => {
+//   NProgress.start()
+//   const hasToken = getToken()
+//   if (hasToken) {
+//     if (whiteList.indexOf(to.path) !== -1) {
+//       const indexPath = store.getters.indexPath
+//       next(indexPath)
+//       NProgress.done()
+//     } else {
+//       const hasMenu = !!store.getters.permissionRoutes.length
+//       if (hasMenu) {
+//         next()
+//       } else {
+//         try {
+//           const res = await store.dispatch('permission/generateRoutes')
+//           addRoutes(router, res)
+//           next({
+//             ...to,
+//             replace: true
+//           })
+//         } catch (error) {
+//           await store.dispatch('user/resetToken')
+//           next(`/login?redirect=${to.fullPath}`)
+//           NProgress.done()
+//         }
+//       }
+//     }
+//   } else {
+//     if (whiteList.indexOf(to.path) !== -1) {
+//       next()
+//     } else {
+//       next(`/login?redirect=${to.fullPath}`)
+//       NProgress.done()
+//     }
+//   }
+// })
 
 router.afterEach((to, from) => {
   to.meta.title && (document.title = to.meta.title)

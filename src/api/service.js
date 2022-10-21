@@ -99,7 +99,7 @@ function createService() {
           break
         case 403:
           error.message = '无权限，重新登录'
-          router.push({ name: 'login' })
+          // router.push({ name: 'login' })
           break
         case 404:
           error.message = `请求地址出错: ${error.response.config.url}`
